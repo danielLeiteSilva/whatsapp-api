@@ -3,7 +3,10 @@ const puppeteer = require('puppeteer');
 async function printTela(site, largura, tamanho, nome){
     try{
         console.info("[INFO] ABRINDO NAVEGADOR");
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({
+            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+            headless: true
+        });
         console.info("[INFO] ABRINDO NOVA ABA");
         const page = await browser.newPage();
         console.info("[INFO] DIRECIONANDO PARA URL");
