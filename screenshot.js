@@ -13,6 +13,7 @@ async function printTela(site, largura, tamanho, nome){
         console.info("[INFO] ABRINDO NOVA ABA");
         const page = await browser.newPage();
         console.info("[INFO] DIRECIONANDO PARA URL");
+
         await page.goto(site);
         console.info("[INFO] ESPERANDO UM TEMPO PARA O SCREENSHOT");
         await sleep(30000);
@@ -26,7 +27,7 @@ async function printTela(site, largura, tamanho, nome){
         console.info("[INFO] FECHANDO NAVEGADOR");
         await browser.close();
     }catch(error){
-        console.info("[ERROR] Houve um erro ao tirar o screenshot");
+        console.info("[ERROR] Houve um erro ao tirar o screenshot", error);
     }
 }
 
