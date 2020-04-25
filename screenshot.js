@@ -3,9 +3,7 @@ const puppeteer = require('puppeteer');
 async function printTela(site, largura, tamanho, nome){
     try{
         console.info("[INFO] ABRINDO NAVEGADOR");
-        const browser = await puppeteer.launch({
-            headless: true
-        });
+        const browser = await puppeteer.launch();
         console.info("[INFO] ABRINDO NOVA ABA");
         const page = await browser.newPage();
         console.info("[INFO] DIRECIONANDO PARA URL");
