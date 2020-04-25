@@ -8,7 +8,7 @@ async function printTela(site, largura, tamanho, nome){
                 '--no-sandbox', 
                 '--disable-setuid-sandbox'
             ],
-            headless: true
+            headless: false
         });
         console.info("[INFO] ABRINDO NOVA ABA");
         const page = await browser.newPage();
