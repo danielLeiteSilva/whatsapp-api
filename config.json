@@ -1,0 +1,4 @@
+{
+    "Brasil":{"url": "https://covid.saude.gov.br/", "width":1000, "height":2100, "nome":"Brasil"},
+    "Encanto":{"url":"https://www.encanto.rn.gov.br/campanha.php", "width":1000, "height":2100, "nome":"Encanto"}
+}
