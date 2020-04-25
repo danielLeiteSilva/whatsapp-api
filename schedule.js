@@ -7,6 +7,7 @@ const config = require('./config.json');
 // inicio();
 
 async function inicio(){
+    console.log("[START] INICIO DO SCHEDULE")
     schedule.scheduleJob("*/5 * * * *", async function(){
         // processo();
         await carregaArquivos(); 
