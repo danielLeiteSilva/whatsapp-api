@@ -4,7 +4,7 @@ const { convertFileBas64 } = require('./convertBase64');
 const { sendFile } = require('./sendGroupWhatsapp');
 const config = require('./config.json');
 
-inicio();
+// inicio();
 
 async function inicio(){
     schedule.scheduleJob("*/5 * * * *", async function(){
@@ -43,3 +43,7 @@ async function processo(site, width, height, nome){
         console.info(error);
     }
 }   
+
+module.exports = {
+    inicio
+}

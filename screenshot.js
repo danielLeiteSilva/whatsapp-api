@@ -4,7 +4,10 @@ async function printTela(site, largura, tamanho, nome){
     try{
         console.info("[INFO] ABRINDO NAVEGADOR");
         const browser = await puppeteer.launch({
-            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+            args: [
+                '--no-sandbox', 
+                '--disable-setuid-sandbox'
+            ],
             headless: true
         });
         console.info("[INFO] ABRINDO NOVA ABA");
